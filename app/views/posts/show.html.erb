@@ -1,3 +1,17 @@
 <h1><%= @post.title %></h1>
-<p><%= @post.text.html_safe %></p>
-<p>posted by Rachael Miller at <%= @post.created_at %></p>
+  <p><%= @post.text.html_safe %></p>
+  <p>posted by Rachael Miller at <%= @post.created_at %></p>
+
+<h2>comments</h2>
+<% @comments.each do |comment| %>
+  <p><%= comment.text %></p>
+  <p>posted by <%= comment.author %> at <%= comment.created_at %></p>
+<% end %>
+
+<h3>add a comment</h3>
+<form class="comment-form" action="/comments" method="post">
+  <input type="hidden" name="comment[post_id]" value="<%=@post.id%>">
+  <input type="text" name="comment[author]" placeholder="name">
+  <input type="text" name="comment[text]" placeholder="type your comment here">
+  <input type="submit">
+</form>
