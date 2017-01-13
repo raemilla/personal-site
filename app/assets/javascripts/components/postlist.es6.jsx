@@ -6,7 +6,11 @@ class PostList extends React.Component {
   render(){
     return(
       <ul>
-        <p>hello</p>
+        {
+          this.props.post_array.map((post, idx) => {
+            return(<Post key={idx} data={post}/>)
+          })
+        }
       </ul>
     )
   }

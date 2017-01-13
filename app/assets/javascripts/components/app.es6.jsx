@@ -6,7 +6,7 @@ class App extends React.Component {
   render() {
     return(
       <div className="container">
-        <PostList posts={this.props.posts} />
+        <PostList post_array={this.props.posts} />
       </div>
     )
   }
