@@ -1,6 +1,8 @@
 <h1>rachael miller development</h1>
-  <% @posts.each do |post|%>
+
+  <%= react_component 'App', posts = @posts %>
+  <!-- <% @posts.each do |post|%>
     <h2><a href="/posts/<%= post.id %>"><%= post.title %></a></h2>
     <p><%= post.text.html_safe %></p>
     <p>posted by Rachael Miller at <%= post.created_at %></p>
-  <% end %>
+  <% end %> -->
