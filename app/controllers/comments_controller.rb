@@ -8,11 +8,12 @@ class CommentsController < ApplicationController
     redirect_to @post
   end
 
-  def update
-  end
-
-  def destroy
-  end
+  # without having current users is this necessary?
+  # def update
+  # end
+  #
+  # def destroy
+  # end
 
   private
     def comment_params
