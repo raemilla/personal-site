@@ -1,11 +1,14 @@
 class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
-    @comment.save
-
-    @post = Post.find(@comment.post_id)
-
-    redirect_to @post
+    if @comment.save
+      if request.xhr?
+        render json: @comment.to_json
+      else
+        @post = Post.find(@comment.post_id)
+        redirect_to @post
+      end
+    end
   end
 
   # without having current users is this necessary?
