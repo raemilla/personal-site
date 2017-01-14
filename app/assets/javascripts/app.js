@@ -15,5 +15,7 @@ $(document).ready(function(){
       $(".comment-text").val("");
       $(".comment-container").append("<p>"+response.text+"</p><p>posted by "+response.author+" on "+response.created_at+"</p>");
     })
-  })
+  });
+
+  $('.modal').modal();
 })
