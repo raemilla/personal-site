@@ -17,5 +17,6 @@ $(document).ready(function(){
     })
   });
 
-  $('.modal').modal();
+  $('#modal1').modal();
+  $('#modal2').modal();
 })
