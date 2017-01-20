@@ -7,6 +7,8 @@ class App extends React.Component {
     return(
       <div className="container">
         <PostList post_array={this.props.posts} />
+        <About />
+        <Contact />
       </div>
     )
   }
