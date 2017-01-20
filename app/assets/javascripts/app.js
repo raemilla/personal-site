@@ -5,11 +5,6 @@ $(document).ready(function(){
       method: "post",
       url: "/comments",
       data: $(event.target).serialize()
-      // {
-      //   author: $(".comment-author").val(),
-      //   text: $(".comment-text").val(),
-      //   post_id: $(".post-id").val()
-      // }
     }).done(function(response){
       $(".comment-author").val("");
       $(".comment-text").val("");
@@ -18,4 +13,6 @@ $(document).ready(function(){
   });
 
   $('.modal').modal();
+
+
 })

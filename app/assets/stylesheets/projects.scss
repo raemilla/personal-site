@@ -1,3 +1,22 @@
 // Place all the styles related to the Projects controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+html, body, .block {
+   height: 100%;
+ }
+
+ // Class for when element is above threshold
+ .pin-top {
+   position: relative;
+ }
+
+ // Class for when element is below threshold
+ .pin-bottom {
+   position: relative;
+ }
+
+ // Class for when element is pinned
+ .pinned {
+   position: fixed !important;
+ }
