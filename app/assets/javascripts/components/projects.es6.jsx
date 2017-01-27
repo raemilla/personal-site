@@ -11,7 +11,7 @@ class Projects extends React.Component {
             <div className="carousel-fixed-item center">
               <a className="btn waves-effect white grey-text darken-text-2">button</a>
             </div>
-            <div className="carousel-item red white-text" href="#one!">
+            <div className="carousel-item red white-text" id="test" href="#one!">
               <h2>First Panel</h2>
               <p className="white-text">This is your first panel</p>
             </div>
